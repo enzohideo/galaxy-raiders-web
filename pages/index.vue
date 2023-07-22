@@ -17,9 +17,6 @@
 </script>
 
 <style>
-  body {
-     background-image: url('/assets/space.png');
-  }
   h2 {
     font-family: serif; 
     color: white;

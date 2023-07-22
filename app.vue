@@ -15,5 +15,6 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+  background-image: url('/assets/space.png');
 }
 </style>
