@@ -9,6 +9,8 @@
 }
 
 html {
+  color: white;
+  font-family: 'Press Start 2P', serif;
   font-size: 12px;
 }
 

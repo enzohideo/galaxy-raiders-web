@@ -29,7 +29,6 @@
   h2 {
     margin-bottom: 30px;
 
-    font-family: serif;
     font-weight: bold;
     font-size: 75px;
 
@@ -62,7 +61,6 @@
     color: white;
     background-color: transparent;
 
-    font-family: serif;
     font-weight: bold;
     font-size: 30px;
 
