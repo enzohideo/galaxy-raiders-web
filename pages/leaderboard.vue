@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <div class="center table-wrapper">
     <client-only>
       <table>
-        <tr>
-          <th class="score-points">Points</th>
-          <th class="score-asteroids">#Asteroids</th>
-          <th class="score-date">Date</th>
-        </tr>
-          <tr v-for="score in leaderboard">
-            <td class="score-points">{{ score.points }}</td>
-            <td class="score-asteroids">{{ score.destroyedAsteroids }}</td>
-            <td class="score-date">{{ formatDate(score.date) }}</td>
-          </tr>
+        <thead>
+          <th>Points</th>
+          <th>#Asteroids</th>
+          <th>Date</th>
+        </thead>
+        <tbody v-for="score in leaderboard">
+          <td class="score-points">{{ score.points }}</td>
+          <td class="score-asteroids">{{ score.destroyedAsteroids }}</td>
+          <td class="score-date">{{ formatDate(score.date) }}</td>
+        </tbody>
       </table>
     </client-only>
   </div>
@@ -22,22 +22,43 @@
     data: leaderboard,
   } = await $get("/leaderboard");
 
-  const formatDate = (dateString) => {
+  function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleString();
+    return date.toLocaleString([],{
+      hour12: false,
+    }).replace(' ', '\u00A0');
   }
 </script>
 
 <style scoped>
-table {
-  width: 100%;
-}
+  .table-wrapper {
+    border-radius: 15px;
+    border: 3px solid white;
+  }
 
-tr {
-  text-align: center;
-}
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+  }
 
-.score-points {
-  text-align: left; 
-}
+  th {
+    padding: 25px;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  tbody:hover {
+    background-color: rgba(255, 255, 255,0.1);
+  }
+
+  thead {
+    border-bottom: 3px solid white;
+  }
+
+  .score-points {
+    text-align: right;
+  }
 </style>
