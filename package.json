@@ -3,6 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "mock-api": "json-server mock-api.json --routes mock-routes.json --port 5000",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
