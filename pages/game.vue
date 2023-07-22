@@ -25,6 +25,8 @@ const {
   refresh: updateSpaceField
 } = await $get("/space-field");
 
+let interval;
+
 onMounted(() => {
   window.addEventListener("keydown", async (event) => {
     const keyToCommand = {
@@ -45,7 +47,11 @@ onMounted(() => {
     await $post("/ship/commands", { command })
   });
 
-  window.setInterval(updateSpaceField, 20);
+  interval = window.setInterval(updateSpaceField, 20);
+})
+
+onBeforeUnmount(() => {
+  window.clearInterval(interval);
 })
 </script>
 
