@@ -88,16 +88,16 @@
   }
 
   @keyframes color-change {
-    0%    { color: blue   ; }
+    0%    { color: blue   ; transform: translateY(0); }
     10%   { color: gray   ; }
     20%   { color: white  ; }
     30%   { color: yellow ; }
     40%   { color: orange ; }
-    50%   { color: pink   ; }
+    50%   { color: pink   ; transform: translateY(-10%); }
     60%   { color: orange ; }
     70%   { color: yellow ; }
     80%   { color: white  ; }
     90%   { color: gray   ; }
-    100%  { color: silver ; }
+    100%  { color: blue   ; transform: translateY(0); }
   }
 </style>
