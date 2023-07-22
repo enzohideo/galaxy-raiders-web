@@ -77,6 +77,10 @@
     -o-transition: all .2s ease;
   }
 
+  .button:hover {
+    background-color: rgba(255, 255, 255,0.1);
+  }
+
   .button:active {
     position: relative;
     transform: translateY(5px);
