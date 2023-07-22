@@ -4,9 +4,9 @@
     <h2> GALAXY &nbsp;RAIDERS </h2>
 
     <ul>
-      <li><NuxtLink to="/game">Start</NuxtLink></li>
-      <li><NuxtLink to="/leaderboard">Leaderboard</NuxtLink></li>
-      <li><NuxtLink to="/exit">Exit</NuxtLink></li>
+      <li><NuxtLink class="button" to="/game">Start</NuxtLink></li>
+      <li><NuxtLink class="button" to="/leaderboard">Leaderboard</NuxtLink></li>
+      <li><NuxtLink class="button" to="/exit">Exit</NuxtLink></li>
     </ul>
 
   </div>
@@ -48,7 +48,7 @@
     0 20px 20px rgba(0,0,0,.3);
   }
 
-  li {
+  .button {
     position: relative;
     top: 140px;
     color: white;
@@ -74,7 +74,7 @@
     -o-transition: all .2s ease;
   }
 
-  li:active {
+  .button:active {
     position: relative;
     top: 145px;
     -webkit-box-shadow: 0px 3px 0px #095e9c, 0px 9px 25px #095e9c;
