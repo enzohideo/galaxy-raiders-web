@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="center">
     <h2>Galaxy Raiders</h2>
     <div class="button-wrapper">
       <NuxtLink class="button" to="/game">Start</NuxtLink>
@@ -16,14 +16,6 @@
 <style>
   :root {
     --button-shadow: 0px 10px 0px #1672b5, 0px 10px 30px #1672b5;
-  }
-
-  .menu {
-    text-align: center;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
   }
 
   h2 {

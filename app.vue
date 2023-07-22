@@ -19,4 +19,12 @@ body {
   width: 100vw;
   background-image: url('/assets/space.png');
 }
+
+.center {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 </style>
